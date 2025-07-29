@@ -6,15 +6,12 @@
 // };
 
 enum Subject {
-  maths = "maths",
-  language = "language",
-  science = "science",
-  history = "history",
-  coding = "coding",
-  geography = "geography",
-  economics = "economics",
-  finance = "finance",
-  business = "business",
+  Cinderella = "Cinderella",
+  SnowWhite = "Snow White",
+  Rapunzel = "Rapunzel",
+  SleepingBeauty = "Sleeping Beauty",
+  TheLittleMermaid = "The Little Mermaid",
+  BeautyAndTheBeast = "Beauty and the Beast",
 }
 
 type Companion = Models.DocumentList<Models.Document> & {
