@@ -16,8 +16,9 @@ const NavBar = () => {
             </Link>
             <div className="flex items-center gap-8">
                 <p>Home</p>
-                <p>Companions</p>
+                <p>Characters</p>
                 <p>My Story</p>
+                <p>Sign In</p>
             </div>
         </nav>
     )
