@@ -1,7 +1,7 @@
-const CompanionsLibrary = () => {
+const CharactersLibrary = () => {
     return (
-        <div>Fairy Tales Companion Library</div>
+        <div>Fairy Tales Character Library</div>
     )
 }
 
-export default CompanionsLibrary
+export default CharactersLibrary

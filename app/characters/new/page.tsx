@@ -1,6 +1,6 @@
 const NewCompanion = () => {
     return (
-        <div>NewCompanion</div>
+        <div>New Character</div>
     )
 }
 

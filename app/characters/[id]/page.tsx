@@ -2,7 +2,7 @@ import React from "react";
 
 const CharacterSession = () => {
     return (
-        <div>Companion Session</div>
+        <div>Characters Session</div>
     )
 }
 
