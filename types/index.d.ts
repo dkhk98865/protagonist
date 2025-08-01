@@ -14,7 +14,7 @@ enum Subject {
   BeautyAndTheBeast = "Beauty and the Beast",
 }
 
-type Companion = Models.DocumentList<Models.Document> & {
+type Protagonists = Models.DocumentList<Models.Document> & {
   $id: string;
   name: string;
   subject: Subject;
@@ -23,7 +23,7 @@ type Companion = Models.DocumentList<Models.Document> & {
   bookmarked: boolean;
 };
 
-interface CreateCompanion {
+interface CreateProtagonist {
   name: string;
   subject: string;
   topic: string;
@@ -32,7 +32,7 @@ interface CreateCompanion {
   duration: number;
 }
 
-interface GetAllCompanions {
+interface GetAllProtagonists {
   limit?: number;
   page?: number;
   subject?: string | string[];
@@ -68,7 +68,7 @@ interface SavedMessage {
   content: string;
 }
 
-interface CompanionComponentProps {
+interface ProtagonistComponentProps {
   companionId: string;
   subject: string;
   topic: string;

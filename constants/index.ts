@@ -24,7 +24,7 @@ export const voices = {
 export const recentSessions = [
   {
     id: "1",
-    subject: "Cinderella",
+    subject: "Fairy Tale",
     name: "Cinderella",
     topic: "The Cinderella Story",
     duration: 10,
@@ -32,7 +32,7 @@ export const recentSessions = [
   },
   {
     id: "2",
-    subject: "Snow White",
+    subject: "Fairy Tale",
     name: "Snow White",
     topic: "The Snow White Story",
     duration: 10,
@@ -40,7 +40,7 @@ export const recentSessions = [
   },
   {
     id: "3",
-    subject: "Rapunzel",
+    subject: "Fairy Tale",
     name: "Rapunzel",
     topic: "The Rapunzel Story",
     duration: 10,
@@ -48,7 +48,7 @@ export const recentSessions = [
   },
   {
     id: "4",
-    subject: "Sleeping Beauty",
+    subject: "Fairy Tale",
     name: "Sleeping Beauty",
     topic: "The Sleeping Beauty Story",
     duration: 10,
@@ -56,7 +56,7 @@ export const recentSessions = [
   },
   {
     id: "5",
-    subject: "The Little Mermaid",
+    subject: "Fairy Tale",
     name: "The Little Mermaid",
     topic: "The Little Mermaid Story",
     duration: 10,
@@ -64,7 +64,7 @@ export const recentSessions = [
   },
   {
     id: "6",
-    subject: "Beauty and the Beast",
+    subject: "Fairy Tale",
     name: "Beauty and the Beast",
     topic: "The Beauty and the Beast Story",
     duration: 10,

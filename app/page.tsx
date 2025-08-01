@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import ProtagonistCard from '@/components/protagonistcard'
 import ProtagonistList from '@/components/protagonistlist'
 import Cta from '@/components/cta'
+import { recentSessions } from '@/constants'
 
 const Page = () => {
   return (
@@ -37,7 +38,10 @@ const Page = () => {
         </section>
 
         <section className="home-section">
-          <ProtagonistList/>
+          <ProtagonistList
+            title="Recently viewed stories"
+            protagonists={recentSessions}
+            classNames="w-2/3 max-lg:w-full"/>
           <Cta/>
         </section>
     </main>
