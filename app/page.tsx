@@ -8,13 +8,13 @@ import { recentSessions } from '@/constants'
 const Page = () => {
   return (
     <main>
-      <h1>Popular Protagonists</h1>
+      <h1>Find the fairy tale protagonist that reflects your soul</h1>
       
         <section className="home-section">
           <ProtagonistCard 
             id="123"
             name="Cinderella"
-            topic="Cinderella Story"
+            topic="From ashes to royalty"
             subject="Fairy Tale"
             duration={15}
             color="#ffda6e" 
@@ -22,7 +22,7 @@ const Page = () => {
           <ProtagonistCard 
             id="456"
             name="Snow White"
-            topic="Snow White Story"
+            topic="Innocence betrayed, redeemed by love"
             subject="Fairy Tale"
             duration={15}
             color="#e5d0ff" 
@@ -30,7 +30,7 @@ const Page = () => {
           <ProtagonistCard 
             id="789"
             name="Rapunzel"
-            topic="Rapunzel Story"
+            topic="Freedom found in a towered prison"
             subject="Fairy Tale"
             duration={15}
             color="#bde7ff" 

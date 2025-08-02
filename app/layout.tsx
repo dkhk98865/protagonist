@@ -9,8 +9,8 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Converso",
-  description: "Real-time AI Teaching Platform",
+  title: "Protagoni.st",
+  description: "Find the fairy tale protagonist that reflects your soul",
 };
 
 export default function RootLayout({
