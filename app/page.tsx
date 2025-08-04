@@ -8,7 +8,7 @@ import { recentSessions } from '@/constants'
 const Page = () => {
   return (
     <main>
-      <h1>Find the fairy tale protagonist that reflects your soul</h1>
+      <h1>Discover Your Inner Fairy Tale Character</h1>
       
         <section className="home-section">
           <ProtagonistCard 
