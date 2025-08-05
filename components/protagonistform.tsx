@@ -24,12 +24,16 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { subjects } from "@/constants"
+import { createProtagonist } from "@/lib/actions/protagonist.action"
+import { redirect } from "next/navigation"
 
 const formSchema = z.object({
     name: z.string().min(1, { message: 'Protagonist is required.'}),
     voice: z.string().min(1, { message: 'Voice is required.'}),
     style: z.string().min(1, { message: 'Style is required.'}),
     duration: z.number().min(1, { message: 'Duration is required.'}),
+    subject: z.string().min(1, { message: 'Subject is required.' }),
+    topic: z.string().min(1, { message: 'Topic is required.' }),
 })
 
 const ProtagonistForm = () => {
@@ -38,6 +42,8 @@ const ProtagonistForm = () => {
         resolver: zodResolver(formSchema),
         defaultValues: {
             name: " ",
+            subject: " ",
+            topic: " ",
             voice: " ", 
             style: " ",
             duration: 15,
@@ -45,15 +51,74 @@ const ProtagonistForm = () => {
     })
  
     // 2. Define a submit handler.
-    const onSubmit = (values: z.infer<typeof formSchema>) => {
+    const onSubmit = async (values: z.infer<typeof formSchema>) => {
         // Do something with the form values.
         // ✅ This will be type-safe and validated.
-    console.log(values)
+        const protagonist = await createProtagonist(values);
+
+        if(protagonist) {
+            redirect(`/protagonists/${protagonist.id}`)
+        } else {
+            console.log('Failed to create protagonist');
+            redirect('/');
+        }
     }
 
     return (
         <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+                <FormItem>
+                <FormLabel>Protagonist Name</FormLabel>
+                <FormControl>
+                    <Input 
+                        placeholder="Enter the fairy tale character of your choice" {...field}
+                        className="" 
+                    />
+                </FormControl>
+                <FormDescription>
+                    This is your public display name.
+                </FormDescription>
+                <FormMessage />
+                </FormItem>
+            )}
+            />
+            <FormField
+            control={form.control}
+            name="subject"
+            render={({ field }) => (
+                <FormItem>
+                <FormLabel>Subject</FormLabel>
+                <FormControl>
+                    <Select
+                        onValueChange={field.onChange}
+                        value={field.value}
+                        defaultValue={field.value}
+                    >
+                        <SelectTrigger className="input capitalize">
+                            <SelectValue placeholder="Select the subject" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            {subjects.map((subject) => (
+                                <SelectItem 
+                                    key={subject} value={subject}
+                                    className="capitalize">
+                                    {subject}
+                                </SelectItem>
+                            ))}
+                        </SelectContent>
+                    </Select>
+                </FormControl>
+                <FormDescription>
+                    This is your public display name.
+                </FormDescription>
+                <FormMessage />
+                </FormItem>
+            )}
+            />
             <FormField
             control={form.control}
             name="name"
